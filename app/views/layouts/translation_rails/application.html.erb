@@ -1,0 +1,12 @@
+<% if TranslationCenter::CONFIG["enabled"] %>
+  <%= content_for :head do %>
+    <%= stylesheet_link_tag "translation_center/inspector" %>
+    <%= javascript_include_tag "translation_center/inspector" %>
+  <% end %>
+<% end %>
+
+<% if ["translation_rails/application", "application"].include?(@layout_name) %>
+  <%= render template: 'layouts/application' %>
+<% else %>
+  <%= render template: "layouts/#{@layout_name}"%>
+<% end %>
