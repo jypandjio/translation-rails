@@ -21,3 +21,6 @@ class ActsAsVotableMigration < ActiveRecord::Migration
     drop_table :votes
   end
 end
+
+
+# 20130522073522

@@ -26,3 +26,6 @@ class InstallAudited < ActiveRecord::Migration
     drop_table :audits
   end
 end
+
+
+# 20130522073522683555

@@ -8,3 +8,5 @@ class CreateManagers < ActiveRecord::Migration
     end
   end
 end
+
+# 20130523095615
