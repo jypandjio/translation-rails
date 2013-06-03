@@ -9,7 +9,7 @@ common_atts: &common_atts
       direction: 'ltr'
 
   # yaml imported translations created by translator email, usually User email 
-  yaml_translator_identifier: 'tech@e-accent.com'
+  yaml_translator_identifier: 'tech@example.com'
 
   # when import translation from yaml to db set it to accepted by default
   yaml2db_translations_accepted: true # default is false

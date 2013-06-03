@@ -14,7 +14,7 @@ module TranslationCenter
     def current_user
       @current_user ||=
         if session[:current_user_id].present?
-          Manager.where(email: "tech@e-accent.com").first
+          Manager.find_by_email(TranslationCenter::CONFIG['yaml_translator_identifier'])
         end
     end
 
