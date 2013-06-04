@@ -6,6 +6,7 @@ class CreateManagers < ActiveRecord::Migration
 
       t.timestamps
     end
+    Manager.create(email: TranslationCenter::CONFIG["yaml_translator_identifier"])
   end
 end
 
