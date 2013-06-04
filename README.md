@@ -1,5 +1,4 @@
 ## Translation Rails
-=================
 
 ## Getting started
 
