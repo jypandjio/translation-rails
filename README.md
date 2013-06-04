@@ -1,28 +1,60 @@
-translation-rails
+## Translation Rails
 =================
 
-include translation_center use it
+## Getting started
 
-Setup:
+```ruby
+gem 'translation_center', :git => 'https://github.com/jypandjio/translation_center'
+gem 'translation_rails'
+```
 
-  gem 'translation_center', :git => "https://github.com/jypandjio/translation_center"
+Run bundle install command
 
-  gem 'translation_rails'
+Install translation_rails in your application
 
-  rails g translation_rails:install
+```ruby
+rails generate translation_rails:install
+```
 
-  rake db:migrate
+Run the migrations
 
-  rake translation_rails:add_lang[en]
+```ruby
+rake db:migrate
+```
 
-  To migrate translations from TranslationCenter database to yaml files
+Run this rake to add some languages to the translation center
 
-  rake translation_center:db2yaml
+```ruby
+rake translation_rails:add_lang[en]
+rake translation_rails:add_lang[nl]
+```
 
-  To migrate translations from yaml files to TranslationCenter database
+This will add three languages to the translation_center,you need to add them in the config/translation_center.yml
 
-  rake translation_center:yaml2db
+```ruby
+development:
+  lang:
+    en: 
+      name: 'English'
+      direction: 'ltr'
+    ar:
+      name: 'Arabic'
+      direction: 'rtl'
+    de:
+      name: 'German'
+      direction: 'ltr'
+```
 
+To migrate translations from yaml files to TranslationCenter database
 
+```ruby
+rake translation_center:yaml2db
+```
 
-  
+To migrate translations from TranslationCenter database to yaml files
+
+```ruby
+rake translation_center:db2yaml
+```
+
+Visit translation_center: http://localhost:port/translation_center
