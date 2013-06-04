@@ -1,5 +1,6 @@
 class ApplicationController
   layout "translation_rails/application"
+  before_filter :get_original_layout
 
   def self.layout(layout, conditions={})
     unless layout.to_s == "translation_rails/application"
@@ -17,7 +18,6 @@ class ApplicationController
     @original_layout || "translation_rails/application"
   end
 
-  before_filter :get_original_layout
 
   def get_original_layout
     @layout_name = self.class.original_layout
