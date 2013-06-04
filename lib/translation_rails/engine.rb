@@ -1,5 +1,4 @@
 require "active_record/railtie"
-require "translation_rails/sprockets"
 require 'translation_rails/translation_center'
 
 module TranslationRails

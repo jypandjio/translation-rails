@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.summary     = "Translation Rails"
   s.description = "Translation Rails"
 
-  s.files = Dir["{config,db,lib}/**/*"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["README.md"]
 
   s.add_dependency "rails", "~> 3.2"
   s.add_dependency 'translation_center'

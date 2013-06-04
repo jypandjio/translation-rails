@@ -4,9 +4,6 @@ common_atts: &common_atts
     en:
       name: 'English'
       direction: 'ltr'
-    nl:
-      name: 'Dutch'
-      direction: 'ltr'
 
   # yaml imported translations created by translator email, usually User email 
   yaml_translator_identifier: 'tech@example.com'
