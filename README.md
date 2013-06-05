@@ -56,4 +56,10 @@ To migrate translations from TranslationCenter database to yaml files
 rake translation_center:db2yaml
 ```
 
+Add this line to your app layouts(after javascript_include_tag)
+
+```ruby
+yield :head
+```
+
 Visit translation_center: http://localhost:port/translation_center
