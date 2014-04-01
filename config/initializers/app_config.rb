@@ -1,5 +1,5 @@
 Rails.application.paths["db/migrate"] = [File.expand_path("../../../db/migrate", __FILE__), "db/migrate"]
-
+ApplicationController.send(:include, TranslationRails::ControllerExtend)
 module TranslationCenter
   class ApplicationController < ActionController::Base
 
@@ -17,32 +17,5 @@ module TranslationCenter
           Manager.find_by_email(TranslationCenter::CONFIG['yaml_translator_identifier'])
         end
     end
-
   end
 end
-
-# class ApplicationController < ActionController::Base
-#   layout "translation_rails/application"
-#   before_filter :get_original_layout
-
-#   def self.layout(layout, conditions={})
-#     unless layout.to_s == "translation_rails/application"
-#       self.original_layout = layout.to_s
-#     end
-#     layout = "translation_rails/application"
-#     super
-#   end
-
-#   def self.original_layout=(layout)
-#     @original_layout = layout
-#   end
-
-#   def self.original_layout
-#     @original_layout || "translation_rails/application"
-#   end
-
-
-#   def get_original_layout
-#     @layout_name = self.class.original_layout
-#   end
-# end

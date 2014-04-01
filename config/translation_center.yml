@@ -5,20 +5,20 @@ common_atts: &common_atts
       name: 'English'
       direction: 'ltr'
 
-  # yaml imported translations created by translator email, usually User email 
+  # yaml imported translations created by translator email, usually User email
   yaml_translator_identifier: 'tech@example.com'
 
   # when import translation from yaml to db set it to accepted by default
   yaml2db_translations_accepted: true # default is false
 
   # when admins add/edit translations they are considered accepted directly
-  accept_admin_translations: true 
+  accept_admin_translations: true
 
   identifier_type: 'email' # Uncomment and change the identifier if your User model has no email attribute
   translator_type: 'Manager' # Uncomment and change if you want to change the translator type
 
 development:
-  enabled: true # default false
+  enabled: false # default false
 
   # Keys inspector allowed values:
   # "missing" to inspect only untranslated keys
@@ -27,10 +27,10 @@ development:
   inspector: 'all' # default missing
 
   # I18n.translate source
-  i18n_source: 'db' # can be db or yaml; default is yaml
+  i18n_source: 'yaml' # can be db or yaml; default is yaml
 
   # when a new key is added to db, the value of the key is added as the default translation in English
-  save_default_translation: false 
+  save_default_translation: false
 
   <<: *common_atts
 
@@ -47,6 +47,6 @@ production:
   i18n_source: 'yaml' # can be db or yaml; default is yaml
 
   # when a new key is added to db, the value of the key is added as the default translation in English
-  save_default_translation: false 
+  save_default_translation: false
 
   <<: *common_atts
